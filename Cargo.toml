@@ -1,0 +1,12 @@
+[package]
+name = "iso8601_validator"
+version = "0.1.0"
+authors = ["booyaa <booyaabooyaabooyaa@gmail.com>"]
+
+[dependencies]
+iso8601 = "0.1.1"
+libc = "0.2"
+
+[lib]
+name = "iso8601"
+crate-type = ["cdylib"]
