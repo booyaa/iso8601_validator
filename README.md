@@ -1,5 +1,7 @@
 # A better introduction to Rust FFI
 
+This is a proof of concept code to show how to expose validation functionality from a Rust crate [iso8601](https://crates.io/crates/iso8601) to perl!
+
 ## Usage
 
 This should work with Macs and Linux based environments. Also for perl FFI binding I'm using `FFI::Raw` module rather than xs.
