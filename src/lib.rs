@@ -36,7 +36,7 @@ pub extern fn validate(s: *const c_char) -> boolean_t {
     if rust_validate(r_str) { 1 } else { 0 }
 }
 
-fn rust_validate(input : &str) ->  bool {
+pub fn rust_validate(input : &str) ->  bool {
     let result = parse_datetime(input.as_bytes());
     ! (result.is_err() || result.is_incomplete())
 }
