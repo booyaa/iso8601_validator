@@ -10,6 +10,7 @@ This should work with Macs and Linux based environments. Also for perl FFI bindi
 - Clone the repo `git clone git@github.com:booyaa/iso8601_validator.git`
 - Go to the `iso8601_validator` directory
 - Build `cargo build`
+- Install FFI::Raw `perl -MCPAN -e 'install FFI::Raw'
 - Test code using perl script: `src/main.pl`
 
 The Python code is @shepmaster's excellent [The Rust FFI Omnibus](http://jakegoulding.com/rust-ffi-omnibus/).
