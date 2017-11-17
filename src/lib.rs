@@ -63,6 +63,8 @@ pub extern fn validate(s: *const c_char) -> boolean_t {
         assert!(!s.is_null());
 
         // 10 - having tested for a null pointer we can safely return C string
+        // make sure you point out the three reasons why this call is "unsafe"
+        // https://doc.rust-lang.org/std/ffi/struct.CStr.html#method.from_ptr
         CStr::from_ptr(s)
     };
 
@@ -90,5 +92,5 @@ pub fn rust_validate(input : &str) ->  bool {
     // 14  finally we check the outcome, because the iso8601 crate uses nom 
     // (which works with streams of data), we can either return some data, an 
     // error or incomplete (if the stream is truncated)
-    ! (result.is_err() || result.is_incomplete())
+    result.is_done() // thanks badboy!
 }
